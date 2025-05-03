@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bluetooth Speaker - Demo Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+    }
+    .slide {
+      display: none;
+    }
+    .slide img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 8px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      user-select: none;
+      border-radius: 3px;
+      background: rgba(0,0,0,0.3);
+    }
+    .next { right: 0; }
+    .btn.add-to-cart {
+      background-color: #1a73e8;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn.add-to-cart:hover {
+      background-color: #155ac0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">🛍️ Demo Shop</h1>
+      <div class="header-right">
+        <span class="cart">Cart: <span id="cart-count">0</span></span>
+        <a href="checkout.html" class="checkout-link">Checkout</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="product-page">
+      <div class="product-gallery">
+        <div class="slideshow-container">
+          <div class="slide fade">
+            <img src="images/speaker1.jpg" alt="Bluetooth Speaker" style="max-width: 600px; width: 100%; border-radius: 12px;" />
+            />
+          </div>
+          <div class="slide fade">
+            <img src="images/speaker2.jpg" alt="Speaker back view" style="max-width: 600px; width: 100%; border-radius: 12px;" />
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+      </div>
+      <div class="product-details">
+        <h2>Bluetooth Speaker</h2>
+        <p class="description">
+          Clear sound, deep bass, and portable design. Ideal for music on the go with long battery life and a splash-resistant build.
+        </p>
+        <p class="price">R299.00</p>
+        <button onclick="addToCart('Bluetooth Speaker', 299)" class="btn add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Demo Shop. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      let i;
+      const slides = document.getElementsByClassName("slide");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

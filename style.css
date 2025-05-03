@@ -1,0 +1,146 @@
+/* style.css */
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 0;
+  }
+  
+  header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .checkout-link {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  .checkout-link:hover {
+    background-color: #0056b3;
+  }
+  
+  .hero {
+    background: linear-gradient(135deg, #e0f7ff, #f9f9f9);
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s ease;
+  }
+  
+  .product-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .product-card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem;
+  }
+  
+  .product-card .price {
+    font-weight: 600;
+    color: #007bff;
+    margin: 0.5rem;
+  }
+  
+  footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 600px) {
+    .product-card img {
+      height: 180px;
+    }
+  
+    .logo {
+      font-size: 1.5rem;
+    }
+  
+    .checkout-link {
+      font-size: 0.9rem;
+   
+   }
+
+   /* Style for main product image */
+    .product-gallery img,
+    .slideshow-container img {
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+}
+
+  }
+  
